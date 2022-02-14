@@ -19,7 +19,7 @@ h3{
   padding-left: 1.5rem;
 
 }
-.chat__container{
+.chat_container{
   background-color: black;
   width: 30rem;
   height: 30rem;
@@ -29,13 +29,39 @@ h3{
   margin: auto;
 }
 
+
 /*CARD*/
-card_container{
+.card{
+  width: 70%;
+  height: 7rem;
+  background-color: grey;
+}
+
+.card_container{
   padding-left: 1rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
   padding-right:1.5rem ;
   background-color: grey;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  align-content: center;
+}
 
+.text{
+  display: flex;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+.user{
+  width: 20px;
+  height: 30px;
+  font-weight: bold;
+  color: lightgray;
+}
+.wordCounter{
+  float: right;
+  color: lightgray;
 }
 
