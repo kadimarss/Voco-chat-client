@@ -19,7 +19,6 @@ function Chat() {
                     )
                 })}
 
-
                 <form className="uks">
                     <input className="guest" type="text"
                             onChange={(event) => {

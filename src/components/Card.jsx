@@ -1,7 +1,6 @@
 import React from "react";
 import '../App.css';
 
-
 function Card({text, user, date, counter}) {
     return (
         <div className="Card">
