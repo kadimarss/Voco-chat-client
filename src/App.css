@@ -9,6 +9,7 @@ html{
 .Chat{
   height: 100vh;
   background-color: lightblue;
+  display: flex;
 
 }
 h3{
@@ -21,12 +22,12 @@ h3{
 }
 .chat_container{
   background-color: black;
-  width: 30rem;
-  height: 30rem;
-  display: flex;
+  width: 45rem;
+  height: 50rem;
   justify-content: center;
   align-content: center;
   margin: auto;
+  overflow: auto;
 }
 
 
@@ -35,6 +36,9 @@ h3{
   width: 70%;
   height: 7rem;
   background-color: grey;
+  display: flex;
+  padding: 10px;
+  margin: 10px;
 }
 
 .card_container{
@@ -47,21 +51,64 @@ h3{
   color: white;
   display: flex;
   align-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  flex-direction: column;
+
+
 }
 
 .text{
-  display: flex;
-  padding-left: 15px;
-  padding-right: 5px;
+  float: right;
+  align-items: center;
 }
 .user{
-  width: 20px;
-  height: 30px;
   font-weight: bold;
   color: lightgray;
+  margin: 5px;
+
 }
-.wordCounter{
-  float: right;
+.card_date{
   color: lightgray;
+  margin: 5px;
 }
 
+.word_counter{
+  float: right;
+  color: lightgray;
+  margin: 5px;
+}
+.muu{
+  width: 100%;
+  display: flex;
+}
+.guest{
+  background-color: white;
+  width: 90px;
+  height: 50px;
+  border-block-style: solid;
+  border-color: black;
+  flex-direction: column-reverse;
+  float: left;
+}
+.message{
+  width: 275px;
+  height: 50px;
+  background-color: white;
+  flex-direction: column-reverse;
+  padding-left: 50px;
+}
+.btn{
+  border: black;
+}
+
+.lable{
+  color: white;
+}
+
+.uks{
+  flex-direction: column-reverse;
+
+}
