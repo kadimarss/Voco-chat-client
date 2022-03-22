@@ -2,9 +2,23 @@ import React, {useState} from "react";
 import '../App.css';
 import data from '../data.json';
 import Card from "./Card";
+
 function Chat() {
     const [author, setAuthor] = useState('');
     const [text, setText] = useState('');
+
+
+        useEffect(() => {
+            setMessages(data);
+        }, []);
+    const submitMessage = () => {
+        setMessages([...text, {
+            text,
+            user: author,
+            date: new Date().toISOString(),
+        }]);
+        setMessage('');
+    };
 
     return (
         <>
@@ -19,20 +33,30 @@ function Chat() {
                     )
                 })}
 
-                <form className="uks">
-                    <input className="guest" type="text"
-                            onChange={(event) => {
-                                setText(event.target.value);
-                }} />
 
-                    <input className="message" type="text"
-                           onChange={(event) => {
-                               setAuthor(event.target.value);
-                            }} />
-                </form>
-                </div>
+
+            <form className="uks">
+                <input className="guest" type="text"
+                       onChange={(event) => {
+                           setText(event.target.value);
+                       }} />
+
+                <input className="message" type="text"
+                       onChange={(event) => {
+                           setAuthor(event.target.value);
+                       }} />
+            </form>
+            <div className="btn"><button
+                type="submit"
+                onClick={() => {
+                    submitMessage();
+                }}
+            >SEND
+
+            </button></div>
             </div>
-            <div className="btn"><button>Send</button></div>
+            </div>
+
 
 
         </>
